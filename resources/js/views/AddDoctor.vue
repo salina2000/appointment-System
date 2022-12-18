@@ -147,12 +147,10 @@
                       data-style="btn btn-link"
                       id="state"
                     >
-                      <option>Kaduna</option>
-                      <option>Kano</option>
-                      <option>Lago</option>
-                      <option>Abuja</option>
-                      <option>Yobe</option>
-                      <option>Kebbi</option>
+                      <option>Lalitpur</option>
+                      <option>Kathmandu</option>
+                      <option>Bhaktapur</option>
+                      
                     </select>
                     <has-error :form="form" field="state"></has-error>
                   </div>

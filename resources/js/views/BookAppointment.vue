@@ -106,24 +106,34 @@
                       data-style="btn btn-link"
                       id="doctor"
                     >
-                      <option>John James</option>
-                      <option>Jesse Kaffoi</option>
-                      <option>Jane Epok</option>
-                      <option>Aliyu Muhammed</option>
-                      <option>Lawal Abdulahi</option>
+                      <option>Salina Shakya
+                      </option>
+                      <option>Sachin Shakya
+                      </option>
+                      <option>Nabina Basnet
+                      </option>
+                      <option>Manish khadka
+                      </option>
+                     
                     </select>
                     <has-error :form="form" field="doctor"></has-error>
                   </div>
                   <div class="form-group">
                     <label for="date" name="date" class="text-primary">Date</label>
-                    <input
+                    <input 
                       type="Date"
                       v-model="form.date"
+                     
                       class="form-control"
                       :class="{ 'is-invalid': form.errors.has('date') }"
                       id="date"
+                      :format="(YYYY-MM-DD)"
+                      min="2022-12-11"
                       name="date"
+                      
                     />
+                  
+                  
                     <has-error :form="form" field="date"></has-error>
                   </div>
 
@@ -187,7 +197,25 @@
 
 
 <script>
+// var date=new Date();
+// var tdate=date.getDate();
+// var month=date.getMonth()+1;
+// if(tdate<10){
+//   tdate='0'+tdate;
+// }
+// if(month<10){
+//   month = '0'+month;
+
+// }
+// var year=date.getUTCFullYear();
+// var minDate=year + "-" +month+"-"+tdate;
+// document.getElementById("date").setAttribute('min',minDate);
+
+// import Datepicker from 'vuejs-datepicker'
+// import moment from 'moment'
+
 export default {
+  
   data() {
     return {
       editMode: false,
@@ -200,8 +228,11 @@ export default {
         time: "",
         status: "",
         purpose: ""
-      })
-    };
+      }),
+     
+      
+    }
+   
   },
 
   methods: {

@@ -40,6 +40,8 @@ class AppointmentController extends Controller
 ]);
 
           //saving to db
+        //   $cnt= Appointment::find($request->input(date)).count;
+        
        $Appointment = new Appointment;
        $Appointment->email = $request->input('email');
        $Appointment->doctor = $request->input('doctor');
@@ -48,9 +50,7 @@ class AppointmentController extends Controller
        $Appointment->purpose = $request->input('purpose');
        $Appointment->user_id = auth()->user()->id;
        $Appointment->save();
-        // $count=count($Appointment);
-        // if($count>4)
-        //     return ['message'=>'Slot full'];
+       
         return ['message' => 'Post updated'];
 
     }
